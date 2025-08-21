@@ -1,26 +1,47 @@
-// Define custom elements for Stencil components
-try {
-  // Direct import approach
-  import('../packages/helloWorld/dist/hello-world/hello-world.esm.js').then(() => {
-    console.log('HelloWorld ESM module loaded');
-    console.log('hello-world defined:', !!window.customElements.get('hello-world'));
-  }).catch(err => {
-    console.error('ESM import failed:', err);
-    
-    // Fallback to loader
-    try {
-      const { defineCustomElements } = require('../packages/helloWorld/loader');
-      defineCustomElements(window);
-      console.log('HelloWorld loader fallback used');
-    } catch (loaderError) {
-      console.error('Loader fallback failed:', loaderError);
-    }
-  });
-} catch (error) {
-  console.error('HelloWorld registration completely failed:', error);
+// Load Stencil components
+console.log('Starting HelloWorld component loading...');
+
+// Try multiple loading strategies
+async function loadHelloWorld() {
+  try {
+    // Strategy 1: Use the CJS loader
+    const { defineCustomElements } = await import('../packages/helloWorld/loader/index.cjs.js');
+    await defineCustomElements(window);
+    console.log('HelloWorld loaded via CJS loader');
+    return true;
+  } catch (error) {
+    console.warn('CJS loader failed:', error);
+  }
+
+  try {
+    // Strategy 2: Direct ESM import
+    await import('../packages/helloWorld/dist/hello-world/hello-world.esm.js');
+    console.log('HelloWorld loaded via ESM');
+    return true;
+  } catch (error) {
+    console.warn('ESM loading failed:', error);
+  }
+
+  try {
+    // Strategy 3: Use the main loader
+    const { defineCustomElements } = await import('../packages/helloWorld/loader');
+    await defineCustomElements(window);
+    console.log('HelloWorld loaded via main loader');
+    return true;
+  } catch (error) {
+    console.warn('Main loader failed:', error);
+  }
+
+  console.error('All HelloWorld loading strategies failed');
+  return false;
 }
 
-// Other components will be added here when needed
+// Load the component
+loadHelloWorld().then(success => {
+  if (success) {
+    console.log('HelloWorld custom element defined:', !!window.customElements.get('hello-world'));
+  }
+});
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },

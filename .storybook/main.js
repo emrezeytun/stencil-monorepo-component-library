@@ -2,10 +2,7 @@ module.exports = {
   stories: [
     '../packages/helloWorld/stories/**/*.stories.js',
   ],
-  addons: [
-    '@storybook/addon-essentials',
-    '@storybook/addon-interactions',
-  ],
+  addons: [],
   framework: {
     name: '@storybook/html-vite',
     options: {},
@@ -23,7 +20,7 @@ module.exports = {
       'process.env.NODE_ENV': JSON.stringify('development'),
     };
 
-    // Add Stencil source watching
+    // Add Stencil source watching for HMR
     config.server = config.server || {};
     config.server.watch = config.server.watch || {};
     config.server.watch.include = [
@@ -31,15 +28,12 @@ module.exports = {
       'packages/*/src/**/*.ts',
       'packages/*/src/**/*.css',
       'packages/*/dist/**/*',
-      'packages/*/loader/**/*'
     ];
 
-    // Force reload on Stencil changes
-    config.optimizeDeps = config.optimizeDeps || {};
-    config.optimizeDeps.include = [
-      ...(config.optimizeDeps.include || []),
-      'packages/*/loader/**/*'
-    ];
+    // Configure HMR for Stencil components
+    config.server.hmr = {
+      overlay: true
+    };
 
     return config;
   },

@@ -9,8 +9,8 @@ export class HelloWorld {
   render() {
     return (
       <div class="hello-world">
-        <h1>Hello World! 12 12 abc abc</h1>
-        <p>This is a simple Stencil component.</p>
+        <h1>🚀 Hot Reload Test! HMR Working!</h1>
+        <p>Bu değişiklik build almadan görünmeli!</p>
       </div>
     );
   }

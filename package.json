@@ -20,10 +20,12 @@
     "version": "lerna version"
   },
   "devDependencies": {
-    "lerna": "^8.2.3",
     "@storybook/addon-essentials": "^7.6.10",
     "@storybook/addon-interactions": "^7.6.10",
     "@storybook/html-vite": "^7.6.10",
+    "lerna": "^8.2.3",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "storybook": "^7.6.10"
   },
   "keywords": [
