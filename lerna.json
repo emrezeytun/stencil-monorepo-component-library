@@ -1,0 +1,30 @@
+{
+  "version": "independent",
+  "npmClient": "npm",
+  "command": {
+    "publish": {
+      "conventionalCommits": true,
+      "message": "chore(release): publish",
+      "registry": "https://registry.npmjs.org/",
+      "ignoreChanges": [
+        "*.md",
+        "**/stories/**",
+        "**/test/**",
+        "**/*.spec.ts",
+        "**/*.e2e.ts"
+      ]
+    },
+    "version": {
+      "allowBranch": ["main", "master"],
+      "conventionalCommits": true,
+      "exact": true
+    },
+    "bootstrap": {
+      "hoist": true,
+      "strict": true
+    }
+  },
+  "packages": [
+    "packages/*"
+  ]
+}

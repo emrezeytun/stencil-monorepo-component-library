@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HelloWorld Test</title>
+  <script type="module" src="./loader/index.js"></script>
+</head>
+<body>
+  <h1>Manual Test</h1>
+  <hello-world></hello-world>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      console.log('DOM loaded');
+      console.log('Custom elements registry:', window.customElements);
+      console.log('hello-world defined:', window.customElements.get('hello-world'));
+      
+      setTimeout(() => {
+        const hwElement = document.querySelector('hello-world');
+        console.log('HelloWorld element:', hwElement);
+        console.log('Has shadow root:', !!hwElement.shadowRoot);
+      }, 2000);
+    });
+  </script>
+</body>
+</html>
