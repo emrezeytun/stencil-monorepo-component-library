@@ -1,4 +1,13 @@
 import { Config } from '@stencil/core';
+import { reactOutputTarget } from '@stencil/react-output-target';
+import { vueOutputTarget } from '@stencil/vue-output-target';
+import { angularOutputTarget } from '@stencil/angular-output-target';
+
+const distTarget = {
+  type: 'dist-custom-elements',
+  dir: 'dist/components',
+  customElementsExportBehavior: 'single-export-module'
+};
 
 export const config: Config = {
   namespace: 'hello-world',
@@ -14,6 +23,9 @@ export const config: Config = {
       customElementsExportBehavior: 'bundle',
       externalRuntime: false,
     },
+    // React bindings için gerekli custom elements
+    distTarget,
+
     {
       type: 'docs-readme',
       footer: 'Built with ❤️ using Stencil'

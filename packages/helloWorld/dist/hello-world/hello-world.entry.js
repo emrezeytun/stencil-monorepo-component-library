@@ -7,7 +7,7 @@ const HelloWorld = class {
         registerInstance(this, hostRef);
     }
     render() {
-        return (h("div", { key: '8f39b1b55c54187562bebe17dc88dc6cda3cb6a2', class: "hello-world" }, h("h1", { key: '4b7d9596362d878ccb376051be05af095e04d582' }, "\uD83D\uDE80 Hot Reload Test! HMR Working!"), h("p", { key: '15ee5db470f57bf23c9b36513419bd03865149b8' }, "Bu de\u011Fi\u015Fiklik build almadan g\u00F6r\u00FCnmeli!")));
+        return (h("div", { key: '8f39b1b55c54187562bebe17dc88dc6cda3cb6a2', class: "hello-world" }, h("h1", { key: '4b7d9596362d878ccb376051be05af095e04d582' }, "\uD83D\uDD25 UPDATED! HMR Test 2024! tttt abc abc 222"), h("p", { key: '5edc549c1d1594e4e8228d0415a529377ac720d4' }, "Bu de\u011Fi\u015Fiklik otomatik g\u00F6r\u00FCnmeli - Test!  5555 \uD83C\uDFAF \u26A1 aaaaa bbbb!")));
     }
 };
 HelloWorld.style = helloWorldCss;

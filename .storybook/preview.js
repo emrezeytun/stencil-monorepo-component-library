@@ -43,6 +43,14 @@ loadHelloWorld().then(success => {
   }
 });
 
+// Hot reload support - Vite style
+if (import.meta.hot) {
+  import.meta.hot.accept('../packages/helloWorld/dist/hello-world/hello-world.esm.js', () => {
+    console.log('HelloWorld component reloaded!');
+    window.location.reload();
+  });
+}
+
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
   controls: {

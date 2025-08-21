@@ -1,3 +1,7 @@
+/* HelloWorld custom elements */
+export { HelloWorld as HelloWorld } from '../types/helloWorld';
+export { defineCustomElement as defineCustomElementHelloWorld } from './hello-world';
+
 /**
  * Get the base path to where the assets can be found. Use "setAssetPath(path)"
  * if the path needs to be customized.
@@ -31,15 +35,4 @@ export interface SetPlatformOptions {
   rel?: (el: EventTarget, eventName: string, listener: EventListenerOrEventListenerObject, options: boolean | AddEventListenerOptions) => void;
 }
 export declare const setPlatformOptions: (opts: SetPlatformOptions) => void;
-
-/**
- * Utility to define all custom elements within this package using the tag name provided in the component's source.
- * When defining each custom element, it will also check it's safe to define by:
- *
- * 1. Ensuring the "customElements" registry is available in the global context (window).
- * 2. Ensuring that the component tag name is not already defined.
- *
- * Use the standard [customElements.define()](https://developer.mozilla.org/en-US/docs/Web/API/CustomElementRegistry/define)
- * method instead to define custom elements individually, or to provide a different tag name.
- */
-export declare const defineCustomElements: (opts?: any) => void;
+export * from '../types';
