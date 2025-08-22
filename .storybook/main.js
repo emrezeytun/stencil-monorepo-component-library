@@ -1,14 +1,23 @@
+// Suppress punycode deprecation warning
+process.removeAllListeners('warning');
+process.on('warning', (warning) => {
+  if (warning.name === 'DeprecationWarning' && warning.message.includes('punycode')) {
+    return;
+  }
+  console.warn(warning);
+});
+
 module.exports = {
   stories: [
     '../packages/helloWorld/stories/**/*.stories.js',
+    '../packages/button/stories/**/*.stories.js',
   ],
-  addons: [],
+  addons: [
+    '@storybook/addon-essentials',
+  ],
   framework: {
     name: '@storybook/html-vite',
     options: {},
-  },
-  features: {
-    storyStoreV7: true,
   },
   typescript: {
     check: false,

@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`hello-world matches snapshot 1`] = `
+<hello-world>
+  <template shadowrootmode="open">
+    <div class="hello-world">
+      <h1>
+        🔥 UPDATED! HMR Test 2024! tttt abc abc 222
+      </h1>
+      <p>
+        Bu değişiklik otomatik görünmeli - Test! 5555 🎯 ⚡ aaaaa bbbb!
+      </p>
+    </div>
+  </template>
+</hello-world>
+`;

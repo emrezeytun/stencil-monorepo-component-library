@@ -1,0 +1,1 @@
+import{p as o,b as r}from"./p-CNNqbLXo.js";export{s as setNonce}from"./p-CNNqbLXo.js";import{g as t}from"./p-DQuL1Twl.js";var e=()=>{const r=import.meta.url;const s={};if(r!==""){s.resourcesUrl=new URL(".",r).href}return o(s)};e().then((async o=>{await t();return r([["p-e718807e",[[257,"hello-world"]]]],o)}));

@@ -1,5 +1,5 @@
 // Load Stencil components
-console.log('Starting HelloWorld component loading...');
+console.log('Starting component loading...');
 
 // Try multiple loading strategies
 async function loadHelloWorld() {
@@ -36,11 +36,30 @@ async function loadHelloWorld() {
   return false;
 }
 
-// Load the component
+// Load HelloWorld component
 loadHelloWorld().then(success => {
   if (success) {
     console.log('HelloWorld custom element defined:', !!window.customElements.get('hello-world'));
   }
+});
+
+// Load Button component - ULTRA SIMPLE
+async function loadButton() {
+  try {
+    // Direkt script'i import et
+    await import('../packages/button/dist/button/button.esm.js');
+    console.log('✅ Button component loaded successfully!');
+    return true;
+  } catch (error) {
+    console.error('❌ Failed to load Button:', error);
+    return false;
+  }
+}
+
+loadButton().then(success => {
+  setTimeout(() => {
+    console.log('🔍 Button defined?', !!window.customElements.get('comp-button'));
+  }, 500);
 });
 
 // Hot reload support - Vite style

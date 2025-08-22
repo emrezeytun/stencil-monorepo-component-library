@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`comp-button matches snapshot for all variants 1`] = `
+<comp-button variant="primary">
+  <template shadowrootmode="open">
+    <button class="button button--medium button--primary" type="button">
+      <slot></slot>
+    </button>
+  </template>
+  Primary
+</comp-button>
+`;

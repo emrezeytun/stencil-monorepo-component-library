@@ -36,7 +36,7 @@ export const config: Config = {
     }
   ],
   testing: {
-    browserHeadless: true,
+    browserHeadless: "shell",
   },
   devServer: {
     reloadStrategy: 'pageReload',
