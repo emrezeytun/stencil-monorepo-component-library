@@ -541,7 +541,9 @@ var createElm = (oldParentVNode, newParentVNode, childIndex) => {
   let i2 = 0;
   let elm;
   let childNode;
-  {
+  if (newVNode2.$text$ !== null) {
+    elm = newVNode2.$elm$ = win.document.createTextNode(newVNode2.$text$);
+  } else {
     if (!win.document) {
       throw new Error(
         "You are trying to render a Stencil component in an environment that doesn't support the DOM. Make sure to populate the [`window`](https://developer.mozilla.org/en-US/docs/Web/API/Window/window) object before rendering a component."
@@ -692,13 +694,17 @@ var patch = (oldVNode, newVNode2, isInitialRender = false) => {
   const elm = newVNode2.$elm$ = oldVNode.$elm$;
   const oldChildren = oldVNode.$children$;
   const newChildren = newVNode2.$children$;
-  {
+  const text = newVNode2.$text$;
+  if (text === null) {
     {
       updateElement(oldVNode, newVNode2, isSvgMode);
     }
     if (oldChildren !== null && newChildren !== null) {
       updateChildren(elm, oldChildren, newVNode2, newChildren, isInitialRender);
     } else if (newChildren !== null) {
+      if (oldVNode.$text$ !== null) {
+        elm.textContent = "";
+      }
       addVnodes(elm, null, newVNode2, newChildren, 0, newChildren.length - 1);
     } else if (
       // don't do this on initial render as it can cause non-hydrated content to be removed
@@ -706,6 +712,8 @@ var patch = (oldVNode, newVNode2, isInitialRender = false) => {
     ) {
       removeVnodes(oldChildren, 0, oldChildren.length - 1);
     } else ;
+  } else if (oldVNode.$text$ !== text) {
+    elm.data = text;
   }
 };
 var insertBefore = (parent, newNode, reference) => {
@@ -1193,7 +1201,7 @@ const Button = /*@__PURE__*/ proxyCustomElement(class Button extends H {
         };
     }
     render() {
-        return (h("button", { key: '1b1e7119b81dfef7652a86b8c5ec70dd6d65412f', class: `button button--${this.variant} button--${this.size} ${this.disabled ? 'button--disabled' : ''}`, disabled: this.disabled, type: this.type, onClick: this.handleClick }, h("slot", { key: 'ed9c5fd67306120e2dcc0dd3b4a05af3ab92b689' })));
+        return (h("button", { key: '1b1e7119b81dfef7652a86b8c5ec70dd6d65412f', class: `button button--${this.variant} button--${this.size} ${this.disabled ? 'button--disabled' : ''}`, disabled: this.disabled, type: this.type, onClick: this.handleClick }, "dsfsadfasdf", h("slot", { key: '2efa228c2c93c3e01095eaebdf06811a0670df6b' })));
     }
     static get style() { return buttonCss; }
 }, [257, "comp-button", {

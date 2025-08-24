@@ -1,7 +1,7 @@
 'use strict';
 
 var index = require('./index.cjs.js');
-require('./index-CQZguWYK.js');
+require('./index-D-v2w-47.js');
 
 
 

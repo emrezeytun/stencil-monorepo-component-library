@@ -1,7 +1,10 @@
 {
-  "name": "@comp-test/hello-world",
+  "name": "@arcadia-components/hello-world",
   "version": "1.0.0",
   "description": "Simple Hello World component built with Stencil",
+  "publishConfig": {
+    "access": "public"
+  },
   "main": "dist/index.cjs.js",
   "module": "dist/index.js",
   "types": "dist/types/index.d.ts",
@@ -55,10 +58,23 @@
     "web-components",
     "hello-world",
     "ui",
-    "component"
+    "component",
+    "react",
+    "vue", 
+    "angular",
+    "arcadia-components"
   ],
-  "author": "Your Name",
+  "author": "Arcadia Components",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-org/arcadia-components.git",
+    "directory": "packages/helloWorld"
+  },
+  "homepage": "https://github.com/your-org/arcadia-components#readme",
+  "bugs": {
+    "url": "https://github.com/your-org/arcadia-components/issues"
+  },
   "devDependencies": {
     "@stencil/angular-output-target": "^1.1.1",
     "@stencil/core": "^4.27.1",

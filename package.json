@@ -1,5 +1,5 @@
 {
-  "name": "@comp-test/monorepo",
+  "name": "@arcadia-components/monorepo",
   "version": "1.0.0",
   "private": true,
   "description": "Component library monorepo with separate Stencil projects",
@@ -16,18 +16,26 @@
     "build-storybook": "storybook build",
     "storybook:packages": "lerna run storybook --parallel",
     "clean": "lerna clean",
-    "publish": "lerna publish",
-    "version": "lerna version"
+    "publish": "lerna publish from-package",
+    "publish:changed": "lerna publish from-git",
+    "version": "lerna version --conventional-commits",
+    "version:patch": "lerna version patch",
+    "version:minor": "lerna version minor", 
+    "version:major": "lerna version major",
+    "prepublish": "npm run build",
+    "postpublish": "echo '🎉 Packages published to @arcadia-components!'"
   },
   "devDependencies": {
     "@storybook/addon-essentials": "^8.6.14",
     "@storybook/addon-interactions": "^8.6.14",
     "@storybook/html-vite": "^8.6.14",
+    "concurrently": "^9.2.0",
+    "debug": "^4.4.1",
     "esbuild": "^0.25.9",
+    "esbuild-register": "^3.6.0",
     "lerna": "^8.2.3",
     "storybook": "^8.6.14"
   },
-
   "keywords": [
     "stencil",
     "web-components",

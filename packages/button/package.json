@@ -1,7 +1,10 @@
 {
-  "name": "@comp-test/button",
+  "name": "@arcadia-components/button",
   "version": "1.0.0",
   "description": "Button component built with Stencil",
+  "publishConfig": {
+    "access": "public"
+  },
   "main": "dist/index.cjs.js",
   "module": "dist/index.js",
   "types": "dist/types/index.d.ts",
@@ -52,13 +55,26 @@
   },
   "keywords": [
     "stencil",
-    "web-components",
+    "web-components", 
     "button",
     "ui",
-    "component"
+    "component",
+    "react",
+    "vue",
+    "angular",
+    "arcadia-components"
   ],
-  "author": "Your Name",
+  "author": "Arcadia Components",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-org/arcadia-components.git",
+    "directory": "packages/button"
+  },
+  "homepage": "https://github.com/your-org/arcadia-components#readme",
+  "bugs": {
+    "url": "https://github.com/your-org/arcadia-components/issues"
+  },
   "devDependencies": {
     "@stencil/core": "^4.27.1",
 

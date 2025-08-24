@@ -27,6 +27,7 @@ export class Button {
         type={this.type}
         onClick={this.handleClick}
       >
+        dsfsadfasdf
         <slot></slot>
       </button>
     );
