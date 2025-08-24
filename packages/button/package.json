@@ -55,7 +55,7 @@
   },
   "keywords": [
     "stencil",
-    "web-components", 
+    "web-components",
     "button",
     "ui",
     "component",
@@ -77,12 +77,12 @@
   },
   "devDependencies": {
     "@stencil/core": "^4.27.1",
-
     "@types/jest": "^29.5.14",
     "@types/node": "^22.13.5",
     "jest": "^29.7.0",
     "jest-cli": "^29.7.0",
     "puppeteer": "^24.3.0",
     "typescript": "^5.3.0"
-  }
+  },
+  "gitHead": "8cb0519888418c79da209e1b2807e05e1dc31cc6"
 }

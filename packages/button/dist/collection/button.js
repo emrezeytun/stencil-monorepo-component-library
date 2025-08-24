@@ -12,7 +12,7 @@ export class Button {
         };
     }
     render() {
-        return (h("button", { key: '1b1e7119b81dfef7652a86b8c5ec70dd6d65412f', class: `button button--${this.variant} button--${this.size} ${this.disabled ? 'button--disabled' : ''}`, disabled: this.disabled, type: this.type, onClick: this.handleClick }, "dsfsadfasdf", h("slot", { key: '2efa228c2c93c3e01095eaebdf06811a0670df6b' })));
+        return (h("button", { key: '1b1e7119b81dfef7652a86b8c5ec70dd6d65412f', class: `button button--${this.variant} button--${this.size} ${this.disabled ? 'button--disabled' : ''}`, disabled: this.disabled, type: this.type, onClick: this.handleClick }, "test 123", h("slot", { key: '8d93871fea1ba8d5850c9eb166b03dafbbc1e994' })));
     }
     static get is() { return "comp-button"; }
     static get encapsulation() { return "shadow"; }
