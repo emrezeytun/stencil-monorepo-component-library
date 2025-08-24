@@ -1,6 +1,6 @@
 {
   "name": "@arcadia-components/hello-world",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Simple Hello World component built with Stencil",
   "publishConfig": {
     "access": "public"
