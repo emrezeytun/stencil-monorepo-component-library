@@ -1,6 +1,6 @@
 {
   "name": "@arcadia-components/button",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Button component built with Stencil",
   "publishConfig": {
     "access": "public"
