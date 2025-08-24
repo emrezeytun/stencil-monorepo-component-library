@@ -15,5 +15,9 @@ export interface HelloWorldProps {
 // React component wrapper
 export const HelloWorld = createReactComponent<HelloWorldProps, HTMLElement>('hello-world');
 
+// Alternative exports for different naming conventions
+export const helloWorld = HelloWorld;
+export const HelloWorldComponent = HelloWorld;
+
 // Also export the define function for manual registration
 export { defineCustomElements };

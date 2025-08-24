@@ -44,8 +44,10 @@ export const defineButtonElements = () => {
   defineCustomElements();
 };
 
-// Export component for standalone usage
+// Export component for standalone usage with different naming conventions
 export { ButtonComponent } from './proxies';
+export { ButtonComponent as Button } from './proxies';
+export { ButtonComponent as button } from './proxies';
 
 // Export types for better development experience
 export { defineCustomElements };

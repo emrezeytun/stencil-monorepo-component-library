@@ -41,8 +41,10 @@ export const defineHelloWorldElements = () => {
   defineCustomElements();
 };
 
-// Export component for standalone usage
+// Export component for standalone usage with different naming conventions
 export { HelloWorldComponent } from './proxies';
+export { HelloWorldComponent as HelloWorld } from './proxies';
+export { HelloWorldComponent as helloWorld } from './proxies';
 
 // Export types for better development experience
 export { defineCustomElements };

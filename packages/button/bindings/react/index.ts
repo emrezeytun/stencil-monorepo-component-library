@@ -20,5 +20,9 @@ export interface ButtonProps {
 // React component wrapper
 export const Button = createReactComponent<ButtonProps, HTMLElement>('comp-button');
 
+// Alternative exports for different naming conventions
+export const button = Button;
+export const ButtonComponent = Button;
+
 // Also export the define function for manual registration
 export { defineCustomElements };
