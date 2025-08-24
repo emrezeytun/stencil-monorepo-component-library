@@ -22,7 +22,6 @@
     "version:patch": "lerna version patch",
     "version:minor": "lerna version minor", 
     "version:major": "lerna version major",
-    "prepublish": "npm run build",
     "postpublish": "echo '🎉 Packages published to @arcadia-components!'"
   },
   "devDependencies": {
