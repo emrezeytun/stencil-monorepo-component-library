@@ -34,6 +34,14 @@
       "import": "./bindings/vue/index.js",
       "types": "./bindings/vue/index.d.ts"
     },
+    "./bindings/vue": {
+      "import": "./bindings/vue/index.js",
+      "types": "./bindings/vue/index.d.ts"
+    },
+    "./bindings/vue/index.js": {
+      "import": "./bindings/vue/index.js",
+      "types": "./bindings/vue/index.d.ts"
+    },
     "./angular": {
       "import": "./bindings/angular/index.js",
       "types": "./bindings/angular/index.d.ts"

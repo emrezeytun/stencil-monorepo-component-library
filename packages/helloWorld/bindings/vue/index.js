@@ -1,9 +1,9 @@
-import { App, defineComponent, h } from 'vue';
+import { defineComponent, h } from 'vue';
 import { defineCustomElements } from '../../loader';
 
 // TypeScript interface for the HelloWorld component props
 export const HelloWorld = defineComponent({
-  name,
+  name: 'HelloWorld',
   setup(props, { slots, attrs }) {
     // Ensure custom elements are defined
     defineCustomElements();

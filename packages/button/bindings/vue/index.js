@@ -1,11 +1,16 @@
-import { App, defineComponent, h } from 'vue';
+import { defineComponent, h } from 'vue';
 import { defineCustomElements } from '../../loader';
 
 // TypeScript interface for the Button component props
 export const Button = defineComponent({
-  name,
-  props: {},
-  emits,
+  name: 'Button',
+  props: {
+    variant: String,
+    size: String,
+    disabled: Boolean,
+    type: String
+  },
+  emits: ['buttonClick'],
   setup(props, { slots, attrs, emit }) {
     // Ensure custom elements are defined
     defineCustomElements();
@@ -17,7 +22,8 @@ export const Button = defineComponent({
     return () => h('comp-button', {
       ...attrs,
       ...props,
-      onButtonClick}, slots.default?.());
+      onButtonClick: handleButtonClick
+    }, slots.default?.());
   }
 });
 
