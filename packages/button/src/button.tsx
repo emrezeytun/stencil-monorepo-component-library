@@ -27,7 +27,7 @@ export class Button {
         type={this.type}
         onClick={this.handleClick}
       >
-        test 123
+        test 123 aaaa 123123
         <slot></slot>
       </button>
     );

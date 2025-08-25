@@ -17,7 +17,7 @@ const Button = class {
         };
     }
     render() {
-        return (h("button", { key: '1b1e7119b81dfef7652a86b8c5ec70dd6d65412f', class: `button button--${this.variant} button--${this.size} ${this.disabled ? 'button--disabled' : ''}`, disabled: this.disabled, type: this.type, onClick: this.handleClick }, "test 123", h("slot", { key: '8d93871fea1ba8d5850c9eb166b03dafbbc1e994' })));
+        return (h("button", { key: '1b1e7119b81dfef7652a86b8c5ec70dd6d65412f', class: `button button--${this.variant} button--${this.size} ${this.disabled ? 'button--disabled' : ''}`, disabled: this.disabled, type: this.type, onClick: this.handleClick }, "test 123 aaaa 123123", h("slot", { key: 'dd9784570187f73a589040b236a0c5ae742ab940' })));
     }
 };
 Button.style = buttonCss;
